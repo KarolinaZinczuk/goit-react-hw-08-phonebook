@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
+import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
 import { ContactEditor } from 'components/ContactEditor/ContactEditor';
 import { fetchContacts } from 'redux/contact/operations';
@@ -21,6 +22,7 @@ export default function Contacts() {
       </Helmet>
       <ContactEditor />
       <div>{isLoading && 'Request in progress...'}</div>
+      < Filter />
       <ContactList />
     </>
   );
