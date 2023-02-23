@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectContacts, selectFilteredContacts } from 'redux/selectors.js';
-import { deleteContact } from 'redux/operations';
+import { selectContacts, selectFilteredContacts } from 'redux/contact/selectors.js';
+import { deleteContact } from 'redux/contact/operations';
 
 import PropTypes from "prop-types";
 import styles from "./ContactList.module.css";
@@ -16,7 +16,7 @@ export const ContactList = () => {
         <>
             <ul className={styles.list}>
                 {contacts.items.length ? filteredContacts.map((contact) => (
-                    <li className={styles.item} key={contact.id}>
+                    <li className={styles.text} key={contact.id}>
                         {contact.name} {contact.number}
                         <button
                             className={styles.button}
