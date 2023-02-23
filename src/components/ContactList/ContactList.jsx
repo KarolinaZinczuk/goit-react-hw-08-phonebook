@@ -13,7 +13,6 @@ export const ContactList = () => {
     const filteredContacts = useSelector(selectFilteredContacts);
 
     return (
-        <>
             <ul className={styles.list}>
                 {contacts.items.length ? filteredContacts.map((contact) => (
                     <li className={styles.text} key={contact.id}>
@@ -27,7 +26,6 @@ export const ContactList = () => {
                 ))
                     : 'No contacts'}
             </ul>
-        </>
     );
 };
 
